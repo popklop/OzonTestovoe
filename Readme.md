@@ -47,13 +47,12 @@
 
 1. Клонировать репозиторий:
 
-git clone https://github.com/popklop/OzonTestovoe
-cd C:/.../../ozontestovoe-folder
-
+`git clone https://github.com/popklop/OzonTestovoe`
+`cd C:/.../../ozontestovoe-folder`
 
 2. Запустить проект:
 
-docker compose up --build
+`docker compose up --build`
 
 3. Сервисы:
 
@@ -64,5 +63,6 @@ PostgreSQL (для подключения снаружи): localhost:4040
 База данных: ozontestovoe
 
 Пользователь: postgres
+
 
 Пароль: pass
