@@ -1,5 +1,5 @@
 
-# Ozon Test Project — GraphQL CRUD Service
+# Ozon Test Project — GraphQL Service
 
   
 
@@ -66,5 +66,6 @@ PostgreSQL (для подключения снаружи): localhost:4040
 
 
 Пароль: pass
+
 
 
