@@ -7,11 +7,7 @@ import (
 	"sync"
 )
 
-type InMemoryDataAllign struct {
-	mu       sync.RWMutex
-	Posts    []data.Post
-	Comments []data.Comment
-}
+
 type GetData interface {
 	GetPostsById(id []int) ([]*data.Post, error)
 	GetCommByPostId(postid int) ([]data.Comment, error)
@@ -21,6 +17,12 @@ type GetData interface {
 	GetCommentReplies(postid int) ([]data.Comment, error)
 	GetCommById(commid int) (*data.Comment, error)
 	GetPostById(postid int) (data.Post, error)
+}
+
+type InMemoryDataAllign struct {
+	mu       sync.RWMutex
+	Posts    []data.Post
+	Comments []data.Comment
 }
 
 func (d *InMemoryDataAllign) GetPostsById(ids []int) ([]*data.Post, error) {
