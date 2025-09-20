@@ -106,9 +106,9 @@ func (d *InMemoryDataAllign) GetCommentReplies(parentId int) ([]data.Comment, er
 }
 
 func (d *InMemoryDataAllign) CreateComment(comment data.Comment) (*data.Comment, error) {
+	post, err := d.GetPostById(comment.Postid)
 	d.mu.Lock()
 	defer d.mu.Unlock()
-	post, err := d.GetPostById(comment.Postid)
 	if err != nil {
 		return nil, err
 	}
